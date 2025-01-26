@@ -18,13 +18,13 @@ let package = Package(
     targets: [
         .target(
             name: "SWE_Project",
-            path: "Sources/SWE_Project",
             dependencies: [
                 // Add your target dependencies here
-            ]),
+            ],
+            path: "Sources/SWE_Project"),
         .testTarget(
             name: "SWE_ProjectTests",
-            path: "Tests/SWE_ProjectTests",
-            dependencies: ["SWE_Project"]),
+            dependencies: ["SWE_Project"],
+            path: "Tests/SWE_ProjectTests"),
     ]
 )
