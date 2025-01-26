@@ -12,14 +12,13 @@ let package = Package(
             targets: ["SWE_Project"]),
     ],
     dependencies: [
-        // Add your dependencies here, for example:
-        // .package(url: "https://github.com/apple/swift-argument-parser", from: "1.0.0"),
+        .package(url: "https://github.com/apple/swift-argument-parser", from: "1.0.0"),
     ],
     targets: [
         .target(
             name: "SWE_Project",
             dependencies: [
-                // Add your target dependencies here
+                .product(name: "ArgumentParser", package: "swift-argument-parser"),
             ],
             path: "Sources/SWE_Project"),
         .testTarget(
